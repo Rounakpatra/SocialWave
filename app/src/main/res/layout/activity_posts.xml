@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostsActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/TextAppearance.Material3.ActionBar.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:text="New Post"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/post_image"
+        android:layout_width="253dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/sociallogo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typedcaption"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        app:boxStrokeColor="#E81477"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Write caption"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_image">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/cancelpost_btn"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="104dp"
+        android:backgroundTint="@color/white"
+
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typedcaption" />
+
+    <Button
+        android:id="@+id/post_btn"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#0A0C68"
+        android:text="Post"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typedcaption"
+        app:layout_goneMarginEnd="40dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
